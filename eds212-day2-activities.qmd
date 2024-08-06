@@ -1,0 +1,9 @@
+---
+title: "eds212-day2-tasks"
+format: html
+---
+
+library(tidyverse)
+install.packages("palmerpenguins")
+library(palmerpenguins)
+
