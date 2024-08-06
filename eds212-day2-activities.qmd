@@ -6,4 +6,37 @@ format: html
 library(tidyverse)
 install.packages("palmerpenguins")
 library(palmerpenguins)
+data(package = 'palmerpenguins')
+penguins <- penguins
+
+usethis::use_git()
+usethis::use_github()
+
+# find derivative expression and slope
+```{r}
+# find slope of f(x) = x^2 at x = 3
+
+dc_dx <- D(expr = expression(x^2), name = "x")
+dc_dx
+
+
+remove( "dc_dt_fun")
+
+x <- 3
+
+eval(dc_dx)
+
+```
+
+
+```{r}
+# slope of P(a) = 2* (3a+2)^4 - 5. at 1.2
+
+dc_da <- D(expr = expression(2*(3*a+2)^4 -5), name = "a")
+dc_da
+
+a <- 1.2
+
+eval(dc_da)
+```
 
