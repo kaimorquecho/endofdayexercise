@@ -12,7 +12,7 @@ penguins <- penguins
 usethis::use_git()
 usethis::use_github()
 
-# find derivative expression and slope
+# Section 2: find derivative expression and slope
 ```{r}
 # find slope of f(x) = x^2 at x = 3
 
@@ -39,4 +39,41 @@ a <- 1.2
 
 eval(dc_da)
 ```
+
+# Section 3: Make another penguin plot
+
+
+```{r}
+
+# first scatter plot of penguins 
+
+library(palmerpenguins)
+head(penguins)
+data(package = 'palmerpenguins')
+penguins <- penguins
+ 
+library (ggplot2)
+
+ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) + 
+  geom_point() +
+  labs(tittle = "penguin bill sizes by species",
+       x = "bill length (mm)", y = "bill depth (mm)")
+    
+```
+
+
+```{r}
+# Jitter plot 
+
+penguins <- penguins
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm))+
+       geom_jitter() +
+  labs(tittle = "penguin bill sizes by species",
+       x = "species", y = "flipper length")
+
+```
+
+
+
+
 
